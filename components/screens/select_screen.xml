@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="select_screen"
+  extends="Group"
+  >
+  <script type="text/brightscript" uri="pkg:/components/screens/select_screen.brs" />
+  <interface>
+  <field id="list_item_selected"
+          type="assocarray"
+          alias="select_list.itemSelected"
+      />
+</interface>
+  <children>
+    <!-- color="0x000000" -->
+    <Label
+      translation="[75, 150]"
+        id="env"
+        font="font:LargeBoldSystemFont"
+        text="Pick an Option:"/>
+    <RadioButtonList
+      id="select_list"
+      translation="[100, 200]"
+      itemSize="[400,48]"
+    >
+        <ContentNode id = "selection" role = "content" >
+            <select_node title = "Baddies" feed_url="https://api.jsonbin.io/b/5e8ce2cc753e041b892b534f"/>
+            <select_node title = "Copyright" feed_url="https://api.jsonbin.io/b/5e8dd365753e041b892bc0e2"   />
+        </ContentNode>
+    </RadioButtonList>
+  </children>
+</component>
