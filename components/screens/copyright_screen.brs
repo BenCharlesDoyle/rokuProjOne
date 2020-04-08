@@ -10,9 +10,3 @@ sub onFeedChanged(obj)
     m.name.text = feed.info[0].name
 
 end sub  
-
-sub showpostergrid()
-
-  m.content_grid.visible=true
-  m.content_grid.setFocus(true)
-end sub

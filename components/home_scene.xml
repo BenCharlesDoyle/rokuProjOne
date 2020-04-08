@@ -10,5 +10,9 @@
       id="copyright_screen"
       visible="false"
       translation="[0,0]" />
+    <monster_screen
+      id="monster_screen"
+      visible="false"
+      translation="[0,0]" />
   </children>
 </component>

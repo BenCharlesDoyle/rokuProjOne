@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component   name="monster_screen"   extends="Group" >
+    <script type="text/brightscript" uri="pkg:/components/screens/monster_screen.brs" />
+    <interface>
+      <field id="feed_data"
+          type="assocarray"
+          onChange="onFeedChanged"
+          />
+    </interface>
+    <children>
+            <Label
+        translation="[75, 75]"
+          id="first"
+          color="0xFFFFFF"
+          font="font:LargeBoldSystemFont"
+          text=""/>
+    </children>
+</component>

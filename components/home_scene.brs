@@ -1,14 +1,15 @@
 function init()
 	? "[home_scene] init"
-	m.category_screen = m.top.findNode("select_screen")
+	m.select_screen = m.top.findNode("select_screen")
 	m.copyright_screen = m.top.findNode("copyright_screen")
+	m.monster_screen = m.top.findNode("monster_screen")
 
-	m.category_screen.observeField("list_item_selected", "onCategorySelected")
-	m.category_screen.setFocus(true)
+	m.select_screen.observeField("list_item_selected", "onCategorySelected")
+	m.select_screen.setFocus(true)
 end function
 
 sub onCategorySelected(obj)
-    list = m.category_screen.findNode("select_list")
+    list = m.select_screen.findNode("select_list")
     ? "checkedItem: ";list.checkedItem
     ? "ContentNode: ";list.content.getChild(obj.getData())
     item = list.content.getChild(obj.getData())
@@ -28,10 +29,13 @@ sub onFeedResponse(obj)
 	if data <> Invalid 
         if data.monsters <> invalid
 			? "User selected Baddies"
+			m.select_screen.visible = false
+			m.monster_screen.visible = true
+			m.monster_screen.feed_data = data
 
 		else if data.info <> invalid
 			? "User selected Copyright"
-			m.category_screen.visible = false
+			m.select_screen.visible = false
 			m.copyright_screen.visible = true
 			m.copyright_screen.feed_data = data
 		end if
