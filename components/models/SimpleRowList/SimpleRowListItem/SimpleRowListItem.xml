@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name="SimpleRowListItem" extends="Group">
+  <script type="text/brightscript" uri="SimpleRowListItem.brs" />
+  <script type="text/brightscript" uri="SimpleRowListItem.setup.brs" />
+
+  <interface>
+    <field id="itemContent" type="node" onChange="itemContentChanged"/>
+  </interface>
+
+  <children>
+    <LayoutGroup id="itemContainer">
+      <Poster id="itemImage" />
+      <Label id="itemText" />
+    </LayoutGroup>
+  </children>
+</component>

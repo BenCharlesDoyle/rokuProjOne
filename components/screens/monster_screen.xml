@@ -8,11 +8,8 @@
           />
     </interface>
     <children>
-            <Label
-        translation="[75, 75]"
-          id="first"
-          color="0xFFFFFF"
-          font="font:LargeBoldSystemFont"
-          text=""/>
+        <SimpleRowList id="carousel" 
+        translation="[100, 100]"
+        />
     </children>
 </component>
