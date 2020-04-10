@@ -10,20 +10,21 @@ sub onFeedChanged(obj)
 end sub  
 
 function getRowListContent(obj)
-  ? obj.getData()
+  data = obj.getData()
+  ? data.monsters
+  monsters = data.monsters
   'Populate the RowList content here
   data = createObject("roSGNode", "ContentNode")
 
-  for numRows = 0 to 1
     row = data.createChild("ContentNode")
-    row.title = "Row " + stri(numRows)
+    row.title = "Monstas "
 
-    for i = 1 to 3
+    for each monster in monsters
       item = row.createChild("SimpleRowListItemData")
       item.posterUrl = "http://devtools.web.roku.com/samples/images/Landscape_1.jpg"
-      item.labelText = "This is item " + stri(numRows * 3 + i)
+      item.labelText = monster.name
     end for
-  end for
+
 
   return data
 end function

@@ -43,3 +43,18 @@ sub onFeedResponse(obj)
 		? "FEED RESPONSE IS EMPTY!"
 	end if
 end sub
+
+function onKeyEvent(key, press) as Boolean
+	if key = "back" and press
+		if m.copyright_screen.visible
+			m.copyright_screen.visible=false
+			m.select_screen.visible=true
+			return true
+		else if m.monster_screen.visible
+			m.monster_screen.visible=false
+			m.select_screen.visible=true
+			return true
+		end if
+	end if
+  return false
+end function

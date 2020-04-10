@@ -33,7 +33,5 @@ end sub
 '
 ' @since version 1.0
 sub onRowItemFocused(obj)
-  text = obj.getData()
-  ? m.top.content.getChild(text[0]).getChild(text[1])
-  print "======================================================="
+
 end sub
