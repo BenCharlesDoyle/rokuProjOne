@@ -1,6 +1,6 @@
 sub init()
     m.test = m.top.FindNode("first")
-    m.carousel = m.top.findNode("carousel")
+    m.carousel = m.top.FindNode("carousel")
 end sub
 
 sub onFeedChanged(obj)
@@ -11,7 +11,6 @@ end sub
 
 function getRowListContent(obj)
   data = obj.getData()
-  ? data.monsters
   monsters = data.monsters
   'Populate the RowList content here
   data = createObject("roSGNode", "ContentNode")
@@ -21,8 +20,9 @@ function getRowListContent(obj)
 
     for each monster in monsters
       item = row.createChild("SimpleRowListItemData")
-      item.posterUrl = "http://devtools.web.roku.com/samples/images/Landscape_1.jpg"
+      item.posterUrl = monster.thumbnail
       item.labelText = monster.name
+      item.videoUrl = monster.video
     end for
 
 

@@ -3,7 +3,9 @@ function init()
 	m.select_screen = m.top.findNode("select_screen")
 	m.copyright_screen = m.top.findNode("copyright_screen")
 	m.monster_screen = m.top.findNode("monster_screen")
+	m.videoplayer = m.top.findNode("videoplayer")
 
+	m.monster_screen.observeField("monster_selected", "onRowItemSelected")
 	m.select_screen.observeField("list_item_selected", "onCategorySelected")
 	m.select_screen.setFocus(true)
 end function
@@ -14,6 +16,12 @@ sub onCategorySelected(obj)
     ? "ContentNode: ";list.content.getChild(obj.getData())
     item = list.content.getChild(obj.getData())
     loadFeed(item.feed_url)
+end sub
+
+sub onRowItemSelected(obj)
+	? "Carousel: "
+	? m.monster_screen.findNode("carousel").content.getChild(obj.getData()[0]).getChild(obj.getData()[1])
+	'? obj.getData()
 end sub
 
 sub loadFeed(url)

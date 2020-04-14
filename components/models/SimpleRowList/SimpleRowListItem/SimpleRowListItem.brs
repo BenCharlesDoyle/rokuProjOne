@@ -6,6 +6,7 @@ sub init()
   m.itemContainer = m.top.findNode("itemContainer")
   m.itemImage = m.top.findNode("itemImage")
   m.itemText = m.top.findNode("itemText")
+  m.streamUrl = m.top.findNode("url")
 
   setupItem()
 end sub
@@ -17,6 +18,7 @@ sub itemContentChanged()
   itemData = m.top.itemContent
   m.itemImage.uri = itemData.posterUrl
   m.itemText.text = itemData.labelText
+  m.streamUrl.text = itemData.videoUrl
 end sub
 
 

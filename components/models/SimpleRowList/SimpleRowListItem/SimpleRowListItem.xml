@@ -13,6 +13,7 @@
     <LayoutGroup id="itemContainer">
       <Poster id="itemImage" />
       <Label id="itemText" />
+      <ContentNode id="url" />
     </LayoutGroup>
   </children>
 </component>

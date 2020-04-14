@@ -32,6 +32,6 @@ end sub
 ' SimpleRowList function to handle when the row item focus has changed
 '
 ' @since version 1.0
-sub onRowItemFocused(obj)
-
-end sub
+ sub onRowItemFocused(obj)
+ ' ? m.top.content.getChild(obj.getData()[0]).getChild(obj.getData()[1]).videoUrl
+ end sub

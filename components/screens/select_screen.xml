@@ -22,7 +22,7 @@
       itemSize="[400,48]"
     >
         <ContentNode id = "selection" role = "content" >
-            <select_node title = "Baddies" feed_url="https://api.jsonbin.io/b/5e8ce2cc753e041b892b534f"/>
+            <select_node title = "Baddies" feed_url="https://api.jsonbin.io/b/5e95b6d22940c704e1d7d220"/>
             <select_node title = "Copyright" feed_url="https://api.jsonbin.io/b/5e8dd365753e041b892bc0e2"   />
         </ContentNode>
     </RadioButtonList>

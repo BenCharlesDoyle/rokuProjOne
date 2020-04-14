@@ -2,6 +2,10 @@
 <component   name="monster_screen"   extends="Group" >
     <script type="text/brightscript" uri="pkg:/components/screens/monster_screen.brs" />
     <interface>
+      <field id="monster_selected"
+          type="assocarray"
+          alias="carousel.rowItemSelected"
+      />
       <field id="feed_data"
           type="assocarray"
           onChange="onFeedChanged"
